@@ -40,11 +40,19 @@
 
 ---
 
+## The Story Behind CTI-HUB
+
+During my co-op placement at one of the largest telecom companies in the region, I had the opportunity to rotate across multiple divisions within the Cyber Security department — Penetration Testing, Vulnerability Assessment, the Security Operations Center, and finally the Cyber Threat Intelligence team, where I spent almost three months.
+
+During my time with the CTI team, I noticed a pattern that kept slowing down the analysts: **information was everywhere except where it needed to be.** Domain ownership records lived in scattered spreadsheets. Asset inventories were incomplete or outdated. When a new CVE dropped, analysts had to manually browse the NVD website and cross-reference it with existing records to find out if it had already been reported. When a suspicious domain alert came in from a vendor like ZeroFox or Group-IB, closing that alert required manually querying five or six different tools — WHOIS, SSL checkers, DNS lookups, HTTP header inspectors, threat intelligence platforms — and piecing together the results by hand. A single domain investigation could take 15 to 30 minutes.
+
+These weren't edge cases. This was the daily reality of the team.
+
+I started small — building standalone Python scripts to solve individual problems. First a GitHub brand-mention dorking script to detect when the brand appeared on public repositories. Then a domain monitoring script to help triage the large volume of suspicious domains coming in from vendor alerts. Each script reduced manual work, but they were still isolated tools that lived on individual machines.
+
+That's when I decided to build something bigger: a single unified dashboard that brings all of these capabilities together in one place, accessible to the entire team, running 24/7 on a live server. CTI-HUB is the result of that work.
+
 ## Overview
-
-CTI-HUB is a cyberpunk-themed Cyber Threat Intelligence platform that gives security teams complete visibility over their digital footprint. It combines an interactive web dashboard with Python-powered automation engines to handle domain surveillance, real-time CVE tracking from the NIST National Vulnerability Database, brand impersonation detection, and full asset inventory management — all from a single centralized interface.
-
-The platform is built to eliminate the manual overhead that CTI analysts face daily: switching between multiple tools, cross-referencing scattered data sources, and spending up to 30 minutes investigating a single suspicious domain. CTI-HUB automates these workflows and delivers results in seconds, allowing the team to focus on analysis and action rather than data gathering.
 
 ---
 
@@ -290,6 +298,19 @@ python cve_lookup.py
 | `POST` | `/api/domains/update` | Update domain watchlist |
 | `POST` | `/api/cve/scan` | Run NVD CVE search |
 | `POST` | `/api/cve/export-excel` | Generate Excel report |
+
+---
+
+## About
+
+Built by **Ziyad Alshahrani** during a co-op placement in the Cyber Security Department of a major regional telecom company.
+
+- Role: Digital Forensics and Incident Response Trainee
+- Track: Software Engineering — Cyber Security
+- University: Prince Sultan University, CCIS
+- Rotations: Penetration Testing · Vulnerability Assessment · SOC · Cyber Threat Intelligence
+
+CTI-HUB started as a collection of standalone Python automation scripts and grew into a full production platform after observing the daily challenges faced by the CTI team firsthand.
 
 ---
 
