@@ -224,66 +224,7 @@ Structured intake ensures that every case is logged consistently with sufficient
 
 ---
 
-## Project Structure
 
-```
-cti-hub/
-├── index.html                  # Dashboard entry point
-├── server.py                   # Python backend + REST API
-├── bridge.py                   # Domain surveillance scanner
-├── cve_lookup.py               # Standalone CVE CLI tool
-├── assets/
-│   ├── css/shared.css          # Full design system
-│   ├── js/shared.js            # DB, toast, notifications, export
-│   ├── js/shell.js             # Sidebar + topbar injector
-│   └── img/logo.png
-├── pages/
-│   ├── cve-list.html
-│   ├── monitor-list.html
-│   ├── impersonation.html
-│   ├── analytics.html
-│   ├── public-domains.html
-│   ├── internal-domains.html
-│   ├── subdomains.html
-│   └── mobily-assets.html
-└── cti_output/
-    └── results.json
-```
-
----
-
-## System Design
-
-### Domain Scan Flow
-
-![Domain Scan Flow](diagrams/domain_scan_flow.svg)
-
-### CVE Scan Flow
-
-![CVE Scan Flow](diagrams/cve_scan_flow.svg)
-
----
-
-## Getting Started
-
-### Local Development
-
-```bash
-pip install requests dnspython python-whois tldextract openpyxl reportlab Pillow
-
-cd cti-hub
-python server.py
-```
-
-Open `http://localhost:8004`
-
-### CVE Lookup CLI
-
-```bash
-python cve_lookup.py
-```
-
----
 
 ## API Reference
 
@@ -299,16 +240,7 @@ python cve_lookup.py
 
 ---
 
-## About
 
-Built by **Ziyad Alshahrani** during a co-op placement in the Cyber Security Department of a major regional telecom company.
-
-- Role: Digital Forensics and Incident Response Trainee
-- Track: Software Engineering - Cyber Security
-- University: Prince Sultan University, CCIS
-- Rotations: Penetration Testing · Vulnerability Assessment · SOC · Cyber Threat Intelligence
-
-CTI-HUB started as a collection of standalone Python automation scripts and grew into a full production platform after observing the daily challenges faced by the CTI team firsthand.
 
 ---
 
