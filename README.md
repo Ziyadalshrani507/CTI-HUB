@@ -56,11 +56,6 @@ That's when I decided to build something bigger: a single unified dashboard that
 
 ---
 
-## Architecture
-
-![System Architecture](diagrams/architecture.svg)
-
----
 
 ## Features
 
@@ -205,24 +200,7 @@ When a new fake account is discovered, analysts click **Add Account** to open th
 
 Structured intake ensures that every case is logged consistently with sufficient detail for legal action, platform reporting, or management escalation - regardless of which team member files the report.
 
----
 
-## Tech Stack
-
-| Layer | Technology | Purpose |
-|---|---|---|
-| Frontend | HTML5, CSS3, Vanilla JS | UI and interactivity |
-| Charts | Chart.js | All data visualizations |
-| Fonts | Google Fonts | Orbitron, Rajdhani, Share Tech Mono |
-| Backend | Python 3 (http.server) | File serving + REST API |
-| CVE Data | NIST NVD API v2 | Live CVE lookup |
-| Domain Intel | requests, dnspython, python-whois, tldextract | Domain reconnaissance |
-| Excel Export | openpyxl | Report generation |
-| Persistence | Browser localStorage | Client-side data storage |
-| Reverse Proxy | Nginx | Production routing |
-| Hosting | AWS EC2 t3.micro | Cloud deployment |
-
----
 
 
 
